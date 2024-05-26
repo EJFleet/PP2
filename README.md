@@ -1,39 +1,344 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PP2
 
-Welcome,
+## Intro
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Screenshots of PP2 website on different devices]
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+View PP2 on Github Pages.
 
-## Codeanywhere Reminders
+![GitHub last commit]![GitHub language count]![GitHub top language]![W3C Validation]
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
 ---
 
-Happy coding!
+## CONTENTS
+
+* [User Experience](#user-experience-ux)
+  * [User Stories](#user-stories)
+
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+ 
+* [Features](#features)
+  * [Header](#header)
+  * [Footer](#footer)
+  * [Favicon](#favicon)
+ 
+  * [Future Implementations](#future-implementations)
+  * [Accessibility](#accessibility)
+
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+
+* [Deployment & Local Development](#deployment--local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
+
+* [Testing](#testing)
+  * [Functionality](#functionality)
+  * [Browser Compatibility](#browser-compatibility)
+  * [Responsiveness](#responsiveness)
+  * [HTML and CSS Validation](#html-and-css-validation)
+  * [Solved Bugs](#solved-bugs)
+
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
+
+---
+
+## User Experience (UX)
+
+### User Stories
+
+#### Client Goals
+
+
+
+#### First-time Visitor Goals
+
+I want to: 
+
+#### Returning Visitor Goals
+
+I want to: 
+
+#### Frequent Visitor Goals
+
+I want to 
+
+
+## Design
+
+### Colour Scheme
+
+The colour palette was created using 
+
+![Colour palette for the site]
+
+### Typography
+
+Google Fonts was used to import the chosen fonts for use in the site.
+
+I chose .  
+
+
+![Google Fonts example for the site]
+
+### Imagery
+
+The imagery for the site consists of 
+
+
+### Wireframes
+
+
+#### Mobile
+
+<details >
+<summary>Home and Resumé</summary>  
+
+![homepage and resumé wireframe-mobile](documentation/wireframes/jf-home-and-resume-mobile-wireframe.webp)
+</details> 
+<details >
+<summary>Reel and Gallery</summary>  
+
+![reel and gallery-mobile](documentation/wireframes/jf-reel-and-gallery-phone-wireframe.webp)
+</details> 
+<details >
+<summary>Contact Form</summary>  
+
+![contact form-mobile](documentation/wireframes/jf-contact-form-mobile-wireframe.webp)
+</details> 
+
+#### Desktop
+
+<details >
+<summary>Home and Resumé</summary>  
+
+![homepage and resumé wireframe-desktop](documentation/wireframes/jf-home-and-resume-desktop-wireframe.webp)
+</details> 
+<details >
+<summary>Reel and Gallery</summary>  
+
+![reel and gallery-desktop](documentation/wireframes/jf-reel-and-gallery-desktop-wireframe.webp)
+</details> 
+<details >
+<summary>Contact Form</summary>  
+
+![contact form-desktop](documentation/wireframes/jf-contact-form-desktop-wireframe.webp)
+</details> 
+
+
+## Features
+
+The website consists of one continuous page, divided up into sections.  There is a fixed header at the top of the page, and a footer at the bottom.
+
+The site was designed mobile-first and is responsive at every screen size.
+
+The sections are divided into:
+
+### Header
+
+#### Mobile
+![Header for mobile]
+
+#### Desktop
+![Header for desktop]
+
+The desktop header stretches across the whole viewport, even on very large screens, to give a framing effect to the content below.
+
+The header is fixed, in order to keep the navigation menu in view the whole time, as it is a one-page website and scrolling back to the beginning would be tiresome for the user.
+
+### Footer
+
+#### Mobile
+![Footer for mobile]
+
+#### Desktop
+![Footer for desktop]
+
+The footer contains links to , using icons from [FontAwesome](https://fontawesome.com/).  There is also a line that credits me as the designer and links to my GitHub.
+
+As with the header, the footer stretches across the whole screen to give a framing effect.
+
+### Favicon
+
+![Favicon]
+
+The favicon for the site was created using [favicon.io](https://favicon.io/favicon-generator/) and uses colours from the site's colour scheme.
+
+
+
+### Future Implementations
+
+I would like to add the following features:
+
+
+
+### Accessibility
+
+I have tried to make the site as accessible as possible.  Steps that I have been conscious to take are:
+
+* Using semantic HTML
+* Choosing fonts that are dyslexia-friendly
+* Using descriptive alt attributes on all images 
+* Providing aria-labels for screen readers where there are icons used and no text, i.e. the social media icons in the footer
+* Ensuring that there is a sufficient colour contrast throughout the site
+
+
+## Technologies Used
+
+### Languages Used
+
+HTML, CSS and JavaScript were the main languages used to build this site.  
+
+### Frameworks, Libraries & Programs Used
+
+Git - For version control.
+
+Github - To save and store the files for the website.
+
+Gitpod - For developing the site.
+
+Google Fonts - To import the fonts used on the website.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+Lighthouse - Chrome extension used to assess accessibility.
+
+[Shields.io](https://shields.io/) for adding badges to the readme.
+
+[Favicon.io](https://favicon.io/favicon-generator/) for creating a custom favicon.
+
+[Achecks.org](https://www.achecks.org/apca-wcag-3-accessible-colour-contrast-checker/) for checking the colour contrast for accessibility.
+
+[Coolors.co](https://coolors.co) for creating a colour scheme.
+
+[Deque Univerity](https://dequeuniversity.com/rules/axe/4.8/color-contrast) for adjusting colours to meet accessibility standards.
+
+[Beautifier.io](https://beautifier.io/) to format the site's code.
+
+
+## Deployment & Local Development
+
+### Deployment
+
+The site is deployed using GitHub Pages - [Joan Fleetwood | Actor | Model](https://ejfleet.github.io/joan-fleetwood-actor/).
+
+To Deploy the site using GitHub Pages:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, [EJFleet/joan-fleetwood-actor](https://github.com/EJFleet/joan-fleetwood-actor).
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in or sign up to [Github](https://github.com/).
+2. Go to the repository for this project, [EJFleet/joan-fleetwood-actor](https://github.com/EJFleet/joan-fleetwood-actor).
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in or sign up to [Github](https://github.com/).
+2. Go to the repository for this project, [EJFleet/joan-fleetwood-actor](https://github.com/EJFleet/joan-fleetwood-actor).
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+## Testing
+
+### Functionality
+
+|Test Label|Test Action|Expected Outcome|Test Outcome|
+|-----|-----|-----|-----|
+|Hamburger menu|Click on hamburger icon in mobile view|Navigation menu drops down|PASS|
+|Navigation links|Click on nav links in the header|Site scrolls to appropriate section|PASS|
+|Showreel display|Click play button on the showreel video|Video plays in-page|PASS|
+|Resumé links|Click links within Resumé|Correct link opens in a new tab|PASS|
+|Contact form|Fill in form and press submit|Error messages show if text missing from any box|PASS|
+|Contact form email|Enter string without @ symbol in email box|Error message to say email not correctly formatted|PASS|
+|Contact form POST|Fill in form and press submit|Form submits to CI formdump with all four fields showing the information populated|PASS|
+|Footer links|Click each icon in footer|Correct social media site opens in new tab|PASS|
+
+### Browser Compatibility
+
+The website was tested on:
+* Chrome
+* Edge
+* Safari
+* Firefox
+* Chrome for Android
+
+### Responsiveness
+
+The site was tested on the following devices: 
+* Samsung S9
+* Samsung Galaxy S22
+* Google Pixel 6
+* iPad Pro 2020
+* 15.6" Laptop
+* Desktop PC
+
+It was extensively tested in Chrome Dev Tools for responsiveness from 300px - 5000px.
+
+### HTML and CSS Validation
+
+I used the W3C Markup Validator and W3C CSS Validator to validate the site and to ensure there were no syntax errors contained therein.
+
+#### HTML
+
+
+
+#### CSS
+
+
+### Lighthouse
+
+I used the Chrome extension Lighthouse to test the site, particularly for Performance and Accessibility.  Results below.
+
+![Lighthouse results]
+
+
+### Solved Bugs
+
+* 
+
+* 
+
+* 
+
+## Credits
+
+### Code Used
+
+
+
+### Content
+
+
+### Media
+
+
+  
+### Acknowledgments
+
