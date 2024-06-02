@@ -12,10 +12,40 @@
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     font-family: 'Oswald';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    min-height: 10vh;
+    width: 100%;
+    background-color: #007600;
+}
+
+
+#heading-contents-container {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0 auto;
 }
 
 .game-container {
     background-color: var(--lightgreen);
+    min-height: 80vh;
 }
 
 button {
@@ -25,4 +55,9 @@ button {
 #chef-hat-logo {
      height: 2rem;
      width: auto;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: var(--darkgreen);
 }
