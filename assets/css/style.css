@@ -1,0 +1,28 @@
+
+/* Variables for colours */
+:root {
+    /* colours */
+    --black: #0C0D13;
+    --white: #ffffff;
+    --lightgreen: #5DC24D;
+    --darkgreen: #007600;
+    --accent: yellow;
+}
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    font-family: 'Oswald';
+}
+
+.game-container {
+    background-color: var(--lightgreen);
+}
+
+button {
+    background-color: var(--accent);
+}
+
+#chef-hat-logo {
+     height: 2rem;
+     width: auto;
+}

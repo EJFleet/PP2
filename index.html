@@ -4,19 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <title>Emma's Cooking Quiz</title>
 </head>
 <body>
   <header>
-    <h1>Emma's Cooking Quiz</h1>
+    <h1>Emma's Cooking Quiz <img id="chef-hat-logo" src="assets/images/chef-hat.png" alt="chef hat logo"></h1>
   </header>
 
   <div id="main-container">
     <div class="game-container">
-      <div id="welcome-text">Welcome to my Cooking quiz!</div>
-      <div id="are-you-ready">Are you ready to begin?</div>    
+      <div id="welcome-text">
+        <h2>Welcome to my Cooking quiz!</h2>
+      </div>
+      <div id="are-you-ready">
+        <h3>Are you ready to begin?</h3>
+      </div>    
       <button id="lets-go">Yes! Let's go</button>
-      <div id="high-score">Current High Score: </div>
+      <div class="score-area">
+        <p>Current High Score: <span id="high-score">0</span></p>
+      </div>
     </div>
 
     
