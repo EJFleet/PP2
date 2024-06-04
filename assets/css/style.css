@@ -28,12 +28,12 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Header */
 header {
     min-height: 10vh;
     width: 100%;
     background-color: var(--white);
 }
-
 
 #heading-contents-container {
     width: 100%;
@@ -52,6 +52,7 @@ header h1 {
     width: auto;
 }
 
+/* Container for welcome, game and game-over content */
 .container {
     background-color: var(--white);
     min-height: 70vh;
@@ -65,6 +66,7 @@ header h1 {
     align-items: center;
 }
 
+/* Welcome content */
 #welcome-panel {
     display: flex;
     flex-direction: column;
@@ -77,14 +79,17 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+/* Current high score */
 .score-area {
     margin-bottom: 1rem;
 }
 
+/* Call to Action */
 #are-you-ready {
     margin-bottom: 1rem;
 }
 
+/* Buttons */
 button {
     background-color: var(--accent);
     border-radius: 1%;
@@ -103,10 +108,12 @@ button:active {
     background-color: var(--white);
 }
 
+/* Hidden class */
 .hide {
     display: none;
 }
 
+/* Footer */
 footer {
     min-height: 10vh;
     min-width: 100vw;

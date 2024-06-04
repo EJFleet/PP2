@@ -3,33 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="chef-hat-favicon.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS Stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Title -->
   <title>Emma's Cooking Quiz</title>
 </head>
+
 <body>
+
+  <!-- Header section -->
   <header>
     <div id="heading-contents-container">
         <h1>Emma's Cooking Quiz <img id="chef-hat-logo" src="assets/images/chef-hat.png" alt="chef hat logo"></h1>
     </div>
   </header>
 
+  <!-- Main container on landing page -->
   <div class="container" id="main-container">
+  
+    <!-- Section with welcome message, highest score and call to action -->
     <div id="welcome-panel">
       <div id="welcome-text">
         <h2>Welcome to my Cooking Quiz!</h2>
       </div>
+  
+      <!-- Displays current high score -->
       <div class="score-area">
         <p>Current High Score: <span id="high-score">0</span></p>
       </div>
+  
+      <!-- Call to action -->
       <div id="are-you-ready">
         <h3>Are you ready to begin?</h3>
-      </div>    
+      </div> 
+      
+      <!-- Button to initiate game play -->
       <button class="run-game-button" id="lets-go">Yes! Let's go</button>
     </div>
+
   </div>
 
   <div class="hide container" id="game-container">
