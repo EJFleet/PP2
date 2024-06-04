@@ -17,25 +17,59 @@
     </div>
   </header>
 
-  <div id="main-container">
-    <div class="game-container">
-      <div id="welcome-container">
-        <div id="welcome-text">
-          <h2>Welcome to my Cooking Quiz!</h2>
-        </div>
-        <div class="score-area">
-          <p>Current High Score: <span id="high-score">0</span></p>
-        </div>
-        <div id="are-you-ready">
-          <h3>Are you ready to begin?</h3>
-        </div>    
-        <button id="lets-go">Yes! Let's go</button>
-        </div>
+  <div class="container" id="main-container">
+    <div id="welcome-panel">
+      <div id="welcome-text">
+        <h2>Welcome to my Cooking Quiz!</h2>
+      </div>
+      <div class="score-area">
+        <p>Current High Score: <span id="high-score">0</span></p>
+      </div>
+      <div id="are-you-ready">
+        <h3>Are you ready to begin?</h3>
+      </div>    
+      <button id="lets-go">Yes! Let's go</button>
     </div>
   </div>
 
+  <div class="hide container" id="game-container">
+    
+    <div id="question">placeholder</div>
+
+      <div id="answer-section">
+        <div id="answers">
+          <ul class="answers-list"></ul>
+        </div>
+      </div>
+
+      <div id="next-section">
+        <button id="next-button">Next Question</button>
+      </div>
+
+      <div id="score-section">
+        <h3>Your Score: <span id="your-score">0</span></h3>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hide container" id="game-over-container">
+    <div id="game-over-panel">
+      <h3 id="game-over-text">GAME OVER!</h3>
+      <h4 id="final-score-text">Final Score:</h4>
+      <h5 id="final-score">x</h5>
+    </div>
+
+    <button id="try-again">Try Again</button>
+
+    <button id="home-button">Home</button>
+
+  </div>
+  
+
   <footer>
-    <p>footer</p>
+    <p>Footer</p>
   </footer>
     
   <script src="assets/js/script.js"></script>
