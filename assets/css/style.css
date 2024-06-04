@@ -2,11 +2,11 @@
 /* Variables for colours */
 :root {
     /* colours */
-    --black: #0C0D13;
-    --white: #ffffff;
+    --black: #04151f;
+    --white: #FFF8DC;
     --lightgreen: #5DC24D;
-    --darkgreen: #007600;
-    --accent: yellow;
+    --dark: #183a37;
+    --accent: #C44900;
 }
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -22,12 +22,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+/* Gradient for background - from https://www.naukri.com/code360/library/how-to-create-a-javascript-quiz-code) */
+    background: linear-gradient(to right, #347A2A, var(--lightgreen));
+    background-repeat: no-repeat;
 }
 
 header {
     min-height: 10vh;
     width: 100%;
-    background-color: #007600;
+    background-color: var(--white);
 }
 
 
@@ -44,8 +47,22 @@ header h1 {
 }
 
 .game-container {
-    background-color: var(--lightgreen);
-    min-height: 80vh;
+    background-color: var(--white);
+    min-height: 70vh;
+    min-width: 70vw;
+    margin: 5vh auto;
+    box-shadow: 0 0 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
 }
 
 button {
@@ -59,5 +76,6 @@ button {
 
 footer {
     min-height: 10vh;
-    background-color: var(--darkgreen);
+    min-width: 100vw;
+    background-color: var(--dark);
 }
