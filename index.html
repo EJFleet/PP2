@@ -27,67 +27,65 @@
         <h1>Emma's Cooking Quiz <img id="chef-hat-logo" src="assets/images/chef-hat.png" alt="chef hat logo"></h1>
     </div>
   </header>
-
-  <!-- Main container on landing page -->
-  <div class="container" id="main-container">
   
-    <!-- Section with welcome message, highest score and call to action -->
-    <div id="welcome-panel">
-      <div id="welcome-text">
-        <h2>Welcome to my Cooking Quiz!</h2>
-      </div>
-  
-      <!-- Displays current high score -->
-      <div class="score-area">
-        <p>Current High Score: <span id="high-score">0</span></p>
-      </div>
-  
-      <!-- Call to action -->
-      <div id="are-you-ready">
-        <h3>Are you ready to begin?</h3>
-      </div> 
-      
-      <!-- Button to initiate game play -->
-      <button class="run-game-button" id="lets-go">Yes! Let's go</button>
-    </div>
-
-  </div>
-
-  <div class="hide container" id="game-container">
+  <main>
+    <!-- Main container on home page -->
+    <div class="container" id="home-container">
     
-    <div id="question">placeholder</div>
-
-      <div id="answer-section">
-        <div id="answers">
-          <ul class="answers-list"></ul>
+      <!-- Section with welcome message, highest score and call to action -->
+      <div class="panel" id="welcome-panel">
+        <div class="area" id="welcome-text">
+          <h2>Welcome to my Cooking Quiz!</h2>
         </div>
-      </div>
-
-      <div id="next-section">
-        <button class="next-question-button" id="next-button">Next Question</button>
-      </div>
-
-      <div id="score-section">
-        <h3>Your Score: <span id="your-score">0</span></h3>
+    
+        <!-- Displays current high score -->
+        <div class="area" id="score-area">
+          <p>Current High Score: <span id="high-score">0</span></p>
+        </div>
+    
+        <!-- Call to action -->
+        <div class="area" id="are-you-ready">
+          <h3>Are you ready to begin?</h3>
+        </div> 
+        
+        <!-- Button to initiate game play -->
+        <button class="game-button" id="lets-go">Yes! Let's go</button>
       </div>
 
     </div>
 
-  </div>
+    <div class="hide container" id="game-container">
+      
+      <div class="panel" id="question">Placeholder Question</div>
 
-  <div class="hide container" id="game-over-container">
-    <div id="game-over-panel">
-      <h3 id="game-over-text">GAME OVER!</h3>
-      <h4 id="final-score-text">Final Score:</h4>
-      <h5 id="final-score">x</h5>
+        <div class="area" id="answer-section">
+          <div class="area" id="answers">
+            <ul class="answers-list"></ul>
+          </div>
+        </div>
+
+        <div class="area" id="score-section">
+          <h3>Your Score: <span id="your-score">0</span></h3>
+        </div>
+
+      </div>
+
     </div>
 
-    <button class="run-game-button" id="try-again">Try Again</button>
+    <div class="hide container" id="game-over-container">
+      <div class="panel" id="game-over-panel">
+        <h3 id="game-over-text">GAME OVER!</h3>
+        <h4 id="final-score-text">Final Score:</h4>
+        <h5 id="final-score">x</h5>
+      </div>
 
-    <button id="home-button">Home</button>
+      <button class="game-button" id="try-again">Try Again</button>
 
-  </div>
-  
+      <button class="game-button" id="home-button">Home</button>
+
+    </div>
+
+  </main>  
 
   <footer>
     <p>Footer</p>
