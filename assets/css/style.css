@@ -11,11 +11,10 @@
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: var(--black);
 }
 
 body {
@@ -26,6 +25,7 @@ body {
 /* Gradient for background - from https://www.naukri.com/code360/library/how-to-create-a-javascript-quiz-code) */
     background: linear-gradient(to right, #347A2A, var(--lightgreen));
     background-repeat: no-repeat;
+    color: var(--black);
 }
 
 /* Header */
@@ -118,4 +118,5 @@ footer {
     min-width: 100vw;
     background-color: var(--dark);
     text-align: center;
+    color: var(--white);
 }
