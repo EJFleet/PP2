@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const gameButton = document.getElementByClass('game-button');
+    const homeButton = document.getElementById('home-button');
+    const highScore = document.getElementById('high-score');
+    const yourScore = document.getElementById('your-score');
+    const timeRemaining = document.getElementById('time-remaining');
+    const questionText = document.getElementById('question-text');
+    const finalAnswer = document.getElementById('final-correct-answer');
+    const finalScore = document.getElementById('final-score');
 
         let questions = [
             { question: "What is the main ingredient in a traditional meringue?", answers: ["Butter", "Egg whites", "Flour"], correct: "Egg whites" },
@@ -80,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("class") === "game-button"){
                 runGame();
-            } else if (this.getAttribute("class") === "next-question-button"){
-                nextQuestion();
+            } else if (this.getAttribute("class") === "answer-button"){
+                checkAnswer();
             } else {//display welcome container
             }
         });
@@ -99,15 +107,36 @@ function runGame(){
 }
 
 /**
- * Displays questions and four answer options
+ * Fisher-Yates shuffle for randomising which question is shown (from StackOverflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+ */
+function shuffleQuestions(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+/**
+ * Displays questions and three answer options
  */
 function displayQuestion(){
 
 }
 
+/**
+ * Checks if the answer-button that is clicked by user is correct
+ */
+
 function checkAnswer(){
 
-    ifAnswerCorrect();
+        
+}
 
-    
+function startTimer(){
+
+}
+
+function endGame(){
+
 }
