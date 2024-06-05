@@ -57,10 +57,12 @@
     <!-- Game -->
     <div class="hide container" id="game-container">
       
+      <!-- Displays random question -->
       <div class="panel" id="question-text">
         <h3>Placeholder Question?</h3>
       </div>
 
+        <!-- Displays three multiple choice answers -->
         <div class="area" id="answer-section">
           <div class="area" id="answers">
             <ul class="answers-list">
@@ -71,6 +73,12 @@
           </div>
         </div>
 
+        <!-- Timer -->
+        <div id="timer-section">
+          <h3>Time remaining: <span id="time-remaining">30</span> seconds</h3>
+        </div>
+
+        <!-- Displays current score -->
         <div class="area" id="score-section">
           <h4>Your Score: <span id="your-score">0</span></h4>
         </div>
@@ -83,6 +91,7 @@
     <div class="hide container" id="game-over-container">
       <div class="panel" id="game-over-panel">
         <h3 id="game-over-text">GAME OVER!</h3>
+        <h4>The correct answer was: <span id="final-correct-answer">X</span></h4>
         <h4 id="final-score-text">Final Score:</h4>
         <h5 id="final-score">x</h5>
       </div>
