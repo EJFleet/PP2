@@ -73,15 +73,14 @@ let questions = [
     const gameButton = document.getElementsByClassName('game-button');
     const homeButton = document.getElementById('home-button');
     const highScore = document.getElementById('high-score');
-    const yourScore = document.getElementById('your-score');
+    const currentScore = document.getElementById('current-score'); //span
     const timeRemainingElement = document.getElementById('time-remaining');
-    const questionText = document.getElementById('question-text');
+    const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScore = document.getElementById('final-score');
     const answerButtons = document.getElementsByClassName('answer-button');
 
-    let shuffledQuestions, currentQuestionIndex, 
-    
+    let shuffledQuestions, currentQuestionIndex, currentScoreText 
 
     let buttons = document.getElementsByTagName("button");
 
@@ -106,7 +105,8 @@ let questions = [
 function runGame(){
     shuffledQuestions = shuffleQuestions([...questions])
     currentQuestionIndex = 0
-    yourScore = 0
+    currentScoreText = 0
+    currentScore.textContent = currentScoreText
     timeRemainingElement.textContent = 30
     document.getElementById('home-container').classList.add('hide')
     document.getElementById('game-container').classList.remove('hide')
@@ -129,8 +129,13 @@ function shuffleQuestions(array) {
 /**
  * Displays questions and three answer options
  */
-function displayQuestion(question){
-    for
+function displayQuestion(){
+    resetState();
+    const currentQuestion = shuffledQuestions[currentQuestionIndex];
+    questionText.querySelector('h3').textContent = currentQuestion.question;
+    for (let i = 0; i < answerButtons.length; i++){
+        answerButtons[i].textContent = currentQuestion.answers[i];
+    }
 }
 
 /**
