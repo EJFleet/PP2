@@ -89,7 +89,7 @@ let questions = [
             if (this.getAttribute("class") === "game-button"){
                 runGame();
             } else if (this.getAttribute("class") === "answer-button"){
-                checkAnswer();
+                checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
                 document.getElementById('game-over-container').classList.add('hide')
                 document.getElementById('home-container').classList.remove('hide')
@@ -109,6 +109,7 @@ function runGame(){
     currentScore.textContent = currentScoreText
     timeRemainingElement.textContent = 30
     document.getElementById('home-container').classList.add('hide')
+    document.getElementById('game-over-container').classList.add('hide')
     document.getElementById('game-container').classList.remove('hide')
     startTimer()
     displayQuestion()
@@ -142,8 +143,20 @@ function displayQuestion(){
  * Checks if the answer-button that is clicked by user is correct
  */
 
-function checkAnswer(){
-
+function checkAnswer(selectedButton){
+    let currentQuestion = shuffledQuestions[currentQuestionIndex];
+    if (selectedButton.textContent === currentQuestion.correct){
+        currentScoreText++;
+        currentScore.textContent = currentScoreText;        
+        currentQuestionIndex++;
+        if (currentQuestionIndex < shuffledQuestions.length) {
+        displayQuestion();    
+    } else {
+        endGame();
+    }
+} else {
+    endGame();
+}
         
 }
 
@@ -153,10 +166,12 @@ function startTimer(){
 
 function resetState(){
     for (let button of answerButtons) {
+        button.classList.remove('hasActive');
         button.textContent = '';
     }
 }
 
 function endGame(){
-
+    document.getElementById('game-container').classList.add('hide')
+    document.getElementById('game-over-container').classList.remove('hide')
 }
