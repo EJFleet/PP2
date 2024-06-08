@@ -72,15 +72,16 @@ let questions = [
   ]
     const gameButton = document.getElementsByClassName('game-button');
     const homeButton = document.getElementById('home-button');
-    const highScore = document.getElementById('high-score');
+    const highScoreSpan = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
     const timerSpan = document.getElementById('timer-span');
     const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
-    const finalScore = document.getElementById('final-score');
+    const finalScoreNumber = document.getElementsByClassName('final-score-number');
+    const finalScoreText = document.getElementsByClassName('final-score-text');
     const answerButtons = document.getElementsByClassName('answer-button');
 
-    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
+    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer, highestScoreNumber;
     let timeLeft = 30;
 
 
@@ -97,7 +98,7 @@ let questions = [
             } else if (this.getAttribute("class") === "home-button"){
                 document.getElementById('game-over-container').classList.add('hide');
                 document.getElementById('home-container').classList.remove('hide');
-            };
+            }
         });
     }
 
@@ -166,16 +167,43 @@ function checkAnswer(selectedButton){
         
 }
 
+/**
+ * Starts the timer at 30 seconds and counts down to zero
+ */
+
 function startTimer(){
     timer = setInterval(() => {
         timeLeft--;
         timerSpan.innerText = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(timer);
-            endGame();
+            timesUp();
         }
     }, 1000);
 }
+
+
+/**
+ * Displays the current high score
+ */
+
+function highScore(){
+
+}
+
+
+/**
+ * Displays final score
+ */
+
+function finalScore(){
+
+}
+
+
+/**
+ * Reset the state of the answer buttons when the next question is displayed
+ */
 
 function resetState(){
     for (let button of answerButtons) {
@@ -184,8 +212,24 @@ function resetState(){
     }
 }
 
+
+/**
+ * Displays the game-over panel when a wrong answer is clicked
+ */
+
 function endGame(){
     clearInterval(timer);
     document.getElementById('game-container').classList.add('hide');
     document.getElementById('game-over-container').classList.remove('hide');
+}
+
+
+/**
+ * Displays the times-up panel when the timer runs out 
+ */
+
+function timesUp(){
+    clearInterval(timer);
+    document.getElementById('game-container').classList.add('hide');
+    document.getElementById('times-up-container').classList.remove('hide');
 }
