@@ -271,14 +271,7 @@ To clone the repository:
 
 |Test Label|Test Action|Expected Outcome|Test Outcome|
 |-----|-----|-----|-----|
-|Hamburger menu|Click on hamburger icon in mobile view|Navigation menu drops down|PASS|
-|Navigation links|Click on nav links in the header|Site scrolls to appropriate section|PASS|
-|Showreel display|Click play button on the showreel video|Video plays in-page|PASS|
-|Resumé links|Click links within Resumé|Correct link opens in a new tab|PASS|
-|Contact form|Fill in form and press submit|Error messages show if text missing from any box|PASS|
-|Contact form email|Enter string without @ symbol in email box|Error message to say email not correctly formatted|PASS|
-|Contact form POST|Fill in form and press submit|Form submits to CI formdump with all four fields showing the information populated|PASS|
-|Footer links|Click each icon in footer|Correct social media site opens in new tab|PASS|
+
 
 ### Browser Compatibility
 
@@ -321,7 +314,7 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 ### Solved Bugs
 
-* 
+* Clicked answer-button did not revert back to its original state when the next question was displayed, in mobile view only. 
 
 * 
 
