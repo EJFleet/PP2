@@ -80,7 +80,7 @@ let questions = [
     const finalScore = document.getElementById('final-score');
     const answerButtons = document.getElementsByClassName('answer-button');
 
-    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer  
+    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
     let timeLeft = 30;
 
 
@@ -95,9 +95,9 @@ let questions = [
                 this.classList.add('clicked'); // Mark answer button as clicked
                 checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
-                document.getElementById('game-over-container').classList.add('hide')
-                document.getElementById('home-container').classList.remove('hide')
-            }
+                document.getElementById('game-over-container').classList.add('hide');
+                document.getElementById('home-container').classList.remove('hide');
+            };
         });
     }
 
@@ -107,18 +107,18 @@ let questions = [
  */
 
 function runGame(){
-    shuffledQuestions = shuffleQuestions([...questions])
-    currentQuestionIndex = 0
-    currentScoreText = 0
-    currentScore.textContent = currentScoreText
-    timeLeft = 30 // Reset the timer to 30 seconds
-    timerSpan.innerText = timeLeft // Update the timer display
-    document.getElementById('home-container').classList.add('hide')
-    document.getElementById('game-over-container').classList.add('hide')
-    document.getElementById('game-container').classList.remove('hide')
-    clearInterval(timer)
-    startTimer()
-    displayQuestion()
+    shuffledQuestions = shuffleQuestions([...questions]);
+    currentQuestionIndex = 0;
+    currentScoreText = 0;
+    currentScore.textContent = currentScoreText;
+    timeLeft = 30; // Reset the timer to 30 seconds
+    timerSpan.innerText = timeLeft; // Update the timer display
+    document.getElementById('home-container').classList.add('hide');
+    document.getElementById('game-over-container').classList.add('hide');
+    document.getElementById('game-container').classList.remove('hide');
+    clearInterval(timer);
+    startTimer();
+    displayQuestion();
 
 }
 
@@ -186,6 +186,6 @@ function resetState(){
 
 function endGame(){
     clearInterval(timer);
-    document.getElementById('game-container').classList.add('hide')
-    document.getElementById('game-over-container').classList.remove('hide')
+    document.getElementById('game-container').classList.add('hide');
+    document.getElementById('game-over-container').classList.remove('hide');
 }
