@@ -88,15 +88,20 @@
 
     <!-- Game Over display when wrong answer is clicked -->
     <div class="hide container" id="game-over-container">
+      
       <div class="panel" id="game-over-panel">
         <h3 id="game-over-text">GAME OVER!</h3>
-        <h4>The correct answer was: <span id="final-correct-answer"></span></h4>
-        <h4 class="final-score-text">Final Score:</h4>
-        <h5 class="final-score-number"></h5>
+        <div class="panel" id="correct-answer-div">
+          <h4>The correct answer was:</h4>
+          <h3 id="final-correct-answer"></h3>
+        </div>
+        <div class="panel final-score-div">
+          <h4 class="final-score-text">Final Score:</h4>
+          <h2 class="final-score-number"></h2>
+        </div>
       </div>
 
       <button class="game-button" id="try-again">Try Again</button>
-
       <button class="home-button" id="home-button">Home</button>
 
     </div>
@@ -104,10 +109,14 @@
      <!-- Game Over display when Timer runs out -->
      <div class="hide container" id="times-up-container">
       <div class="panel" id="times-up-panel">
-        <h3 id="game-over-text">TIME'S UP!</h3>
-        <h4>Well done! You answered all questions correctly</h4>
-        <h4 class="final-score-text">Final Score:</h4>
-        <h5 class="final-score-number"></h5>
+        <h2 id="game-over-text">TIME'S UP!</h2>
+        <div class="panel" id="well-done">
+          <h3>Well done! You answered all questions correctly</h3>
+        </div>
+        <div class="panel final-score-div"></div>
+          <h4 class="final-score-text">Final Score:</h4>
+          <h2 class="final-score-number"></h5>
+        
       </div>
 
       <button class="game-button" id="try-again">Try Again</button>

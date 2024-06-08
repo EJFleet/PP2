@@ -62,6 +62,7 @@ main {
     background-color: var(--white);
     height: 50vh;
     width: 85vw;
+    max-width: 800px;
     margin: 5vh auto;
     box-shadow: 0 0 15px;
     border-radius: 1%;
@@ -76,6 +77,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    text-align: center;
 }
 
 .area,
@@ -85,7 +87,8 @@ button {
 
 /* Welcome content */
 #welcome-text {
-    text-wrap: nowrap;
+    text-wrap: wrap;
+    text-align: center;
 }
 
 .answers-list {
@@ -101,9 +104,10 @@ button {
     font-size: 16px;
     padding: 4px;
     font-weight: bold;
-    width: 6rem;
+    width: 5rem;
     height: 4rem;
-    margin: auto 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 button:hover {
@@ -111,12 +115,15 @@ button:hover {
     cursor: pointer;
 }
 
-/*.answer-button {
-    width: 6rem;
-    height: 4rem;
-    margin: auto 0.25rem;
+#try-again {
+    margin-top: 1rem;
 }
-*/
+
+#home-button {
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
 .clicked {
     color: var(--accent);
     background-color: var(--white);
@@ -127,6 +134,14 @@ button:hover {
     display: none;
 }
 
+#game-over-panel {
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+.final-score-div {
+    padding: 0.5rem 1rem;
+}
+
 /* Footer */
 footer {
     min-height: 10vh;
@@ -134,4 +149,16 @@ footer {
     background-color: var(--dark);
     text-align: center;
     color: var(--white);
+}
+
+
+/* Media query: large or landscape phones (576px and up) */
+
+@media screen and (min-width: 576px) {
+    .container {
+        align-items: center; /* Keep items centered horizontally */
+        justify-content: flex-start; /* Align items at the top vertically */
+        padding-top: 4rem; /* Adjust panel to be 4rem from the top */
+        margin-top: 4rem;
+}
 }
