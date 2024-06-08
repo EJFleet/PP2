@@ -74,21 +74,25 @@ let questions = [
     const homeButton = document.getElementById('home-button');
     const highScore = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
-    const timeRemainingElement = document.getElementById('time-remaining');
+    const timerSpan = document.getElementById('timer-span');
     const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScore = document.getElementById('final-score');
     const answerButtons = document.getElementsByClassName('answer-button');
 
-    let shuffledQuestions, currentQuestionIndex, currentScoreText 
+    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer  
+    let timeLeft = 30;
+
 
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("class") === "game-button"){
+                clearInterval(timer);
                 runGame();
             } else if (this.getAttribute("class") === "answer-button"){
+                this.classList.add('clicked'); // Mark answer button as clicked
                 checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
                 document.getElementById('game-over-container').classList.add('hide')
@@ -107,10 +111,12 @@ function runGame(){
     currentQuestionIndex = 0
     currentScoreText = 0
     currentScore.textContent = currentScoreText
-    timeRemainingElement.textContent = 30
+    timeLeft = 30 // Reset the timer to 30 seconds
+    timerSpan.innerText = timeLeft // Update the timer display
     document.getElementById('home-container').classList.add('hide')
     document.getElementById('game-over-container').classList.add('hide')
     document.getElementById('game-container').classList.remove('hide')
+    clearInterval(timer)
     startTimer()
     displayQuestion()
 
@@ -161,17 +167,25 @@ function checkAnswer(selectedButton){
 }
 
 function startTimer(){
-
+    timer = setInterval(() => {
+        timeLeft--;
+        timerSpan.innerText = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            endGame();
+        }
+    }, 1000);
 }
 
 function resetState(){
     for (let button of answerButtons) {
-        button.classList.remove('hasActive');
+        button.classList.remove('clicked');
         button.textContent = '';
     }
 }
 
 function endGame(){
+    clearInterval(timer);
     document.getElementById('game-container').classList.add('hide')
     document.getElementById('game-over-container').classList.remove('hide')
 }

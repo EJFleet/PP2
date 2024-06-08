@@ -102,7 +102,8 @@ button:hover {
     cursor: pointer;
 }
 
-button:active {
+/*button:active,*/
+.clicked {
     color: var(--accent);
     background-color: var(--white);
 }
