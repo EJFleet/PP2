@@ -82,7 +82,7 @@ I want to
 
 The colour palette was created using 
 
-![Colour palette for the site]
+![Colour palette for the site](documentation/feature-screenshots/cooking-quiz-colour-palette-small.png)
 
 ### Typography
 
@@ -104,37 +104,24 @@ The imagery for the site consists of
 #### Mobile
 
 <details >
-<summary>Home and Resumé</summary>  
+<summary>Mobile</summary>  
 
-![homepage and resumé wireframe-mobile](documentation/wireframes/jf-home-and-resume-mobile-wireframe.webp)
-</details> 
-<details >
-<summary>Reel and Gallery</summary>  
-
-![reel and gallery-mobile](documentation/wireframes/jf-reel-and-gallery-phone-wireframe.webp)
-</details> 
-<details >
-<summary>Contact Form</summary>  
-
-![contact form-mobile](documentation/wireframes/jf-contact-form-mobile-wireframe.webp)
+![wireframe-mobile](documentation/wireframes/cooking-quiz-mobile.png)
 </details> 
 
-#### Desktop
+#### Tablet
 
 <details >
-<summary>Home and Resumé</summary>  
+<summary>Tablet</summary>  
 
-![homepage and resumé wireframe-desktop](documentation/wireframes/jf-home-and-resume-desktop-wireframe.webp)
+![wireframe-tablet](documentation/wireframes/cooking-quiz-tablet.png)
 </details> 
-<details >
-<summary>Reel and Gallery</summary>  
 
-![reel and gallery-desktop](documentation/wireframes/jf-reel-and-gallery-desktop-wireframe.webp)
-</details> 
+#### Laptop / Desktop
 <details >
-<summary>Contact Form</summary>  
+<summary>Laptop / Desktop</summary>  
 
-![contact form-desktop](documentation/wireframes/jf-contact-form-desktop-wireframe.webp)
+![wireframe-laptop-desktop](documentation/wireframes/cooking-quiz-pc.png)
 </details> 
 
 
