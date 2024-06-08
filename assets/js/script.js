@@ -78,7 +78,6 @@ let questions = [
     const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScoreNumber = document.getElementsByClassName('final-score-number');
-    const finalScoreText = document.getElementsByClassName('final-score-text');
     const answerButtons = document.getElementsByClassName('answer-button');
 
     let shuffledQuestions, currentQuestionIndex, currentScoreText, timer, highestScoreNumber;
@@ -97,6 +96,7 @@ let questions = [
                 checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
                 document.getElementById('game-over-container').classList.add('hide');
+                document.getElementById('times-up-container').classList.add('hide');
                 document.getElementById('home-container').classList.remove('hide');
             }
         });
@@ -156,16 +156,11 @@ function checkAnswer(selectedButton){
         currentScoreText++;
         currentScore.textContent = currentScoreText;        
         currentQuestionIndex++;
-        if (currentQuestionIndex < shuffledQuestions.length) {
         displayQuestion();    
     } else {
         endGame();
     }
-} else {
-    endGame();
-}
-        
-}
+} 
 
 /**
  * Starts the timer at 30 seconds and counts down to zero
@@ -184,20 +179,23 @@ function startTimer(){
 
 
 /**
- * Displays the current high score
+ * Displays the current highest score
  */
 
-function highScore(){
-
+function getHighestScore(){
+    return parseInt(localStorage.getItem('highestScore')) || 0;
 }
 
+function setHighestScore(){
+    localStorage.setItem('highestScore', currentScoreText);
+}
 
-/**
- * Displays final score
- */
-
-function finalScore(){
-
+function updateHighestScore(){
+    const highestScore = getHighestScore();
+    if (currentScoreText > highestScore) {
+        setHighestScore(currentScoreText);
+    }
+    highScoreSpan.textContent = getHighestScore();
 }
 
 
@@ -212,15 +210,18 @@ function resetState(){
     }
 }
 
-
 /**
  * Displays the game-over panel when a wrong answer is clicked
  */
 
 function endGame(){
     clearInterval(timer);
+    const currentQuestion = shuffledQuestions[currentQuestionIndex];
+    finalAnswer.innerText = currentQuestion.correct;
     document.getElementById('game-container').classList.add('hide');
     document.getElementById('game-over-container').classList.remove('hide');
+    finalScoreNumber[0].innerText = currentScoreText;  
+    updateHighestScore();
 }
 
 
@@ -232,4 +233,9 @@ function timesUp(){
     clearInterval(timer);
     document.getElementById('game-container').classList.add('hide');
     document.getElementById('times-up-container').classList.remove('hide');
+    finalScoreNumber[1].innerText = currentScoreText;  
+    updateHighestScore();
 }
+
+highScoreSpan.textContent = getHighestScore();
+
