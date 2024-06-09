@@ -82,7 +82,7 @@ I want to
 
 The colour palette was created using 
 
-![Colour palette for the site](documentation/feature-screenshots/cooking-quiz-colour-palette-small.png)
+![Colour palette for the site](documentation/feature-screenshots/cooking-quiz-palette2.png)
 
 ### Typography
 
