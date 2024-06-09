@@ -64,7 +64,6 @@ let questions = [
     { question: "What type of pasta is 'Pappardelle'?", answers: ["Thin strips", "Wide ribbons", "Small tubes"], correct: "Wide ribbons" },
   ]
     const gameButton = document.getElementsByClassName('game-button');
-    const homeButton = document.getElementById('home-button');
     const highScoreSpan = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
     const timerSpan = document.getElementById('timer-span');
@@ -88,6 +87,7 @@ let questions = [
                 this.classList.add('clicked'); // Mark answer button as clicked
                 checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
+                document.getElementById('game-container').classList.add('hide');
                 document.getElementById('game-over-container').classList.add('hide');
                 document.getElementById('times-up-container').classList.add('hide');
                 document.getElementById('home-container').classList.remove('hide');
