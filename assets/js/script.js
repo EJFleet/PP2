@@ -62,8 +62,8 @@ let questions = [
     { question: "What is the primary ingredient in the Japanese dish 'Natto'?", answers: ["Rice", "Soybeans", "Fish"], correct: "Soybeans" },
     { question: "What is the main ingredient in a 'Hollandaise sauce'?", answers: ["Cream", "Butter", "Milk"], correct: "Butter" },
     { question: "What type of pasta is 'Pappardelle'?", answers: ["Thin strips", "Wide ribbons", "Small tubes"], correct: "Wide ribbons" },
-  ]
-    const gameButton = document.getElementsByClassName('game-button');
+  ];
+
     const highScoreSpan = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
     const timerSpan = document.getElementById('timer-span');
@@ -71,8 +71,12 @@ let questions = [
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScoreNumber = document.getElementsByClassName('final-score-number');
     const answerButtons = document.getElementsByClassName('answer-button');
+    const gameContainer = document.getElementById('game-container');
+    const gameOverContainer = document.getElementById('game-over-container');
+    const timesUpContainer = document.getElementById('times-up-container');
+    const homeContainer = document.getElementById('home-container');
 
-    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer, highestScoreNumber;
+    let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
     let timeLeft = 30;
 
 
@@ -87,10 +91,10 @@ let questions = [
                 this.classList.add('clicked'); // Mark answer button as clicked
                 checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
-                document.getElementById('game-container').classList.add('hide');
-                document.getElementById('game-over-container').classList.add('hide');
-                document.getElementById('times-up-container').classList.add('hide');
-                document.getElementById('home-container').classList.remove('hide');
+                gameContainer.classList.add('hide');
+                gameOverContainer.classList.add('hide');
+                timesUpContainer.classList.add('hide');
+                homeContainer.classList.remove('hide');
             }
         });
     }
@@ -107,10 +111,10 @@ function runGame(){
     currentScore.textContent = currentScoreText;
     timeLeft = 30; // Reset the timer to 30 seconds
     timerSpan.innerText = timeLeft; // Update the timer display
-    document.getElementById('home-container').classList.add('hide');
-    document.getElementById('game-over-container').classList.add('hide');
-    document.getElementById('times-up-container').classList.add('hide');
-    document.getElementById('game-container').classList.remove('hide');
+    homeContainer.classList.add('hide');
+    gameOverContainer.classList.add('hide');
+    timesUpContainer.classList.add('hide');
+    gameContainer.classList.remove('hide');
     clearInterval(timer);
     startTimer();
     displayQuestion();
@@ -212,8 +216,8 @@ function endGame(){
     clearInterval(timer);
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
     finalAnswer.innerText = currentQuestion.correct;
-    document.getElementById('game-container').classList.add('hide');
-    document.getElementById('game-over-container').classList.remove('hide');
+    gameContainer.classList.add('hide');
+    gameOverContainer.classList.remove('hide');
     finalScoreNumber[0].innerText = currentScoreText;  
     updateHighestScore();
 }
@@ -225,8 +229,8 @@ function endGame(){
 
 function timesUp(){
     clearInterval(timer);
-    document.getElementById('game-container').classList.add('hide');
-    document.getElementById('times-up-container').classList.remove('hide');
+    gameContainer.classList.add('hide');
+    timesUpContainer.classList.remove('hide');
     finalScoreNumber[1].innerText = currentScoreText;  
     updateHighestScore();
 }
