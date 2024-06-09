@@ -59,28 +59,36 @@ View PP2 on Github Pages.
 
 ### User Stories
 
-#### Client Goals
-
-
-
 #### First-time Visitor Goals
 
 I want to: 
+* Play an entertaining game
+* Understand the rules of the game
+* Know what is the highest score that has been achieved
+* Be told what the correct answer is if I get a question wrong
+* See what my score is at the end of the game
+* Be given the opportunity to play again
 
 #### Returning Visitor Goals
 
 I want to: 
+* Try to beat my highest score
+* Answer some questions that I didn't see on the first round
 
 #### Frequent Visitor Goals
 
-I want to 
+I want to:
+* Keep improving my score
+* Learn new facts about cooking and food
 
 
 ## Design
 
 ### Colour Scheme
 
-The colour palette was created using 
+The colour palette was created using the [Coolors](https://coolors.co/) website.  I checked the accessibility of the colours on [Deque University](https://dequeuniversity.com/rules/axe/4.9/color-contrast) and adjusted the accent colour (orange) to improve the contrast.
+
+The main colours are green for the background (with a gradient that gets lighter from left to right) and orange for the buttons.
 
 ![Colour palette for the site](documentation/feature-screenshots/cooking-quiz-palette2.png)
 
@@ -88,15 +96,17 @@ The colour palette was created using
 
 Google Fonts was used to import the chosen fonts for use in the site.
 
-I chose .  
-
+I chose to use the Oswald font throughout the site as it looks clean and modern.  It also comes in different weights, which is useful for different headings.
 
 ![Google Fonts example for the site](documentation/feature-screenshots/oswald-font-sample.png)
 
 ### Imagery
 
-The imagery for the site consists of 
+The imagery for the site consists of a small chef's hat for the favicon and a larger chef's hat for the logo in the header.
 
+![Favicon](/chef-hat-favicon.png)
+
+![Logo](/assets/images/chef-hat.png)
 
 ### Wireframes
 
@@ -127,7 +137,9 @@ The imagery for the site consists of
 
 ## Features
 
-The website consists of one continuous page, divided up into sections.  There is a fixed header at the top of the page, and a footer at the bottom.
+The website consists of one page with four different containers that are displayed/hidden depending on which stage of the site the user is at - home, game play, game over or time's up.
+
+The site fits into the height of the screen and there is no need for scrolling.
 
 The site was designed mobile-first and is responsive at every screen size.
 
@@ -141,9 +153,7 @@ The sections are divided into:
 #### Desktop
 ![Header for desktop]
 
-The desktop header stretches across the whole viewport, even on very large screens, to give a framing effect to the content below.
-
-The header is fixed, in order to keep the navigation menu in view the whole time, as it is a one-page website and scrolling back to the beginning would be tiresome for the user.
+The header stretches across the whole viewport, even on very large screens, to give a framing effect to the content below.
 
 ### Footer
 
@@ -153,15 +163,15 @@ The header is fixed, in order to keep the navigation menu in view the whole time
 #### Desktop
 ![Footer for desktop]
 
-The footer contains links to , using icons from [FontAwesome](https://fontawesome.com/).  There is also a line that credits me as the designer and links to my GitHub.
+The footer contains a link to the home page.
 
 As with the header, the footer stretches across the whole screen to give a framing effect.
 
 ### Favicon
 
-![Favicon]
+![Favicon](/chef-hat-favicon.png)
 
-The favicon for the site was created using [favicon.io](https://favicon.io/favicon-generator/) and uses colours from the site's colour scheme.
+The favicon for the site was downloaded from [Flaticon](https://www.flaticon.com/free-icon/chef-hat_4443003?k=1717963724519&sign-up=google) and is attributed to [Freepik](https://www.flaticon.com/authors/freepik).
 
 
 
