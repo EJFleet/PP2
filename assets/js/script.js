@@ -109,6 +109,7 @@ function runGame(){
     timerSpan.innerText = timeLeft; // Update the timer display
     document.getElementById('home-container').classList.add('hide');
     document.getElementById('game-over-container').classList.add('hide');
+    document.getElementById('times-up-container').classList.add('hide');
     document.getElementById('game-container').classList.remove('hide');
     clearInterval(timer);
     startTimer();

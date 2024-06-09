@@ -49,7 +49,9 @@
         </div> 
         
         <!-- Button to initiate game play -->
-        <button class="game-button" id="lets-go">Yes! Let's go</button>
+        <div class="buttons-div" id="home-page-buttons-div">
+          <button class="game-button" id="lets-go">Yes! Let's go</button>
+        </div>  
       </div>
 
     </div>
@@ -101,8 +103,10 @@
         </div>
       </div>
 
+    <div class="buttons-div" id="game-over-buttons-div">
       <button class="game-button" id="try-again">Try Again</button>
       <button class="home-button" id="home-button">Home</button>
+    </div>
 
     </div>
 
@@ -113,16 +117,16 @@
         <div class="panel" id="well-done">
           <h3>Well done! You answered all questions correctly</h3>
         </div>
-        <div class="panel final-score-div"></div>
+        <div class="panel final-score-div">
           <h4 class="final-score-text">Final Score:</h4>
-          <h2 class="final-score-number"></h5>
-        
+          <h2 class="final-score-number"></h2>
+        </div>
       </div>
-
-      <button class="game-button" id="try-again">Try Again</button>
-
-      <button class="home-button" id="home-button">Home</button>
-
+      
+      <div class="buttons-div" id="times-up-buttons-div">
+        <button class="game-button" id="try-again">Try Again</button>
+        <button class="home-button" id="home-button">Home</button>
+      </div>
     </div>
 
   </main>  
