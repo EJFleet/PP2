@@ -30,7 +30,7 @@ body {
 
 /* Header */
 header {
-    height:15vh;
+    max-height:12vh;
     width: 100%;
     background-color: var(--white);
 }
@@ -174,7 +174,7 @@ footer {
 @media screen and (max-height: 400px) and (orientation: landscape) {
 
     header {
-        min-height: 14vh;
+        height: 14vh;
     }
 
     .container {
