@@ -91,7 +91,7 @@ Google Fonts was used to import the chosen fonts for use in the site.
 I chose .  
 
 
-![Google Fonts example for the site]
+![Google Fonts example for the site](documentation/feature-screenshots/oswald-font-sample.png)
 
 ### Imagery
 

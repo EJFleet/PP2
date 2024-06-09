@@ -25,7 +25,7 @@ let questions = [
     { question: "What is the main ingredient in a traditional French béchamel sauce?", answers: ["Milk", "Butter", "Cream"], correct: "Milk" },
     { question: "Which herb is commonly used in a traditional tabbouleh?", answers: ["Parsley", "Mint", "Cilantro"], correct: "Parsley" },
     { question: "What is the main ingredient in a traditional Korean kimchi?", answers: ["Cabbage", "Lettuce", "Spinach"], correct: "Cabbage" },
-    { question: "Which cheese is traditionally used in a French croque monsieur?", answers: ["Brie", "Camembert", "Gruyère"], correct: "Gruyère" },
+    { question: "Which cheese is traditionally used in a French croque monsieur?", answers: ["Brie", "Comte", "Gruyère"], correct: "Gruyère" },
     { question: "What is the main ingredient in a traditional Japanese tempura?", answers: ["Chicken", "Fish", "Shrimp"], correct: "Shrimp" },
     { question: "Which type of rice is used to make sushi?", answers: ["Basmati", "Short-grain rice", "Long-grain rice"], correct: "Short-grain rice" },
     { question: "What is the main ingredient in a traditional Spanish gazpacho?", answers: ["Pepper", "Cucumber", "Tomato"], correct: "Tomato" },
