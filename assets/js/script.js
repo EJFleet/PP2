@@ -67,6 +67,7 @@ let questions = [
     const highScoreSpan = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
     const timerSpan = document.getElementById('timer-span');
+    const answerButtonUl = document.querySelector('.answers-list');
     const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScoreNumber = document.getElementsByClassName('final-score-number');
@@ -77,7 +78,7 @@ let questions = [
     const homeContainer = document.getElementById('home-container');
 
     let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
-    let timeLeft = 30;
+    let timeLeft = 5;
 
 
     let buttons = document.getElementsByTagName("button");
@@ -87,9 +88,6 @@ let questions = [
             if (this.getAttribute("class") === "game-button"){
                 clearInterval(timer);
                 runGame();
-            } else if (this.getAttribute("class") === "answer-button"){
-                this.classList.add('clicked'); // Mark answer button as clicked
-                checkAnswer(this);
             } else if (this.getAttribute("class") === "home-button"){
                 gameContainer.classList.add('hide');
                 gameOverContainer.classList.add('hide');
@@ -109,7 +107,7 @@ function runGame(){
     currentQuestionIndex = 0;
     currentScoreText = 0;
     currentScore.textContent = currentScoreText;
-    timeLeft = 30; // Reset the timer to 30 seconds
+    timeLeft = 5; // Reset the timer to 30 seconds
     timerSpan.innerText = timeLeft; // Update the timer display
     homeContainer.classList.add('hide');
     gameOverContainer.classList.add('hide');
@@ -136,11 +134,26 @@ function shuffleQuestions(array) {
  * Displays questions and three answer options
  */
 function displayQuestion(){
-    resetState();
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
     questionText.querySelector('h3').textContent = currentQuestion.question;
-    for (let i = 0; i < answerButtons.length; i++){
-        answerButtons[i].textContent = currentQuestion.answers[i];
+
+    answerButtonUl.innerHTML = '';
+
+    for (let i = 0; i < currentQuestion.answers.length; i++){
+       let liElement = document.createElement('li');
+       let answerButton = document.createElement('button');
+       answerButton.classList.add('answer-button');
+       answerButton.textContent = currentQuestion.answers[i];
+
+       answerButton.addEventListener('click', function(event){
+            let clickedButton = event.currentTarget;
+            checkAnswer(clickedButton);       
+        }
+    )
+    
+        liElement.appendChild(answerButton)
+        answerButtonUl.appendChild(liElement)
+
     }
 }
 
@@ -196,17 +209,6 @@ function updateHighestScore(){
     highScoreSpan.textContent = getHighestScore();
 }
 
-
-/**
- * Reset the state of the answer buttons when the next question is displayed
- */
-
-function resetState(){
-    for (let button of answerButtons) {
-        button.classList.remove('clicked');
-        button.textContent = '';
-    }
-}
 
 /**
  * Displays the game-over panel when a wrong answer is clicked
