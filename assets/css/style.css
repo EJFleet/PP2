@@ -104,6 +104,7 @@ button {
 /* Buttons */
 button {
     background-color: var(--accent);
+    color: var(--black);
     border-radius: 1%;
     font-size: 16px;
     padding: 4px;
