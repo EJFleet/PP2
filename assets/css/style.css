@@ -117,11 +117,14 @@ button {
 
 button:hover {
     color: var(--white);
+    background-color: var(--accent);
     cursor: pointer;
 }
 
 .answer-button {
     height: 4rem;
+    background-color: var(--accent);
+    color: var(--black);
 }
 
 #game-over-try-again,
@@ -132,11 +135,6 @@ button:hover {
 #times-up-home-button {
     margin-top: 0.5rem;
     margin-bottom: 2.5rem;
-}
-
-.clicked {
-    color: var(--accent);
-    background-color: var(--white);
 }
 
 .hide {
