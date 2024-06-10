@@ -6,7 +6,10 @@
 
 View PP2 on Github Pages.
 
-![GitHub last commit]![GitHub language count]![GitHub top language]![W3C Validation]
+![GitHub last commit](https://img.shields.io/github/last-commit/EJFleet/cooking-quiz)
+![GitHub language count](https://img.shields.io/github/languages/count/EJFleet/cooking-quiz)
+![GitHub top language](https://img.shields.io/github/languages/top/ejfleet/cooking-quiz)
+![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fejfleet.github.io%2Fcooking-quiz%2F)
 
 
 ---

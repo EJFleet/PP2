@@ -36,11 +36,12 @@
       <div class="panel" id="welcome-panel">
         <div class="area" id="welcome-text">
           <h2>Welcome to my Cooking Quiz!</h2>
+          <p class="panel">Get as many correct answers as you can in 30 seconds - the game ends when you get a wrong answer</p>
         </div>
     
         <!-- Displays current high score -->
         <div class="area" id="score-area">
-          <p>Current High Score: <span id="high-score">0</span></p>
+          <h3>Current High Score: <span id="high-score">0</span></h3>
         </div>
     
         <!-- Call to action -->
@@ -92,19 +93,19 @@
     <div class="hide container" id="game-over-container">
       
       <div class="panel" id="game-over-panel">
-        <h3 id="game-over-text">GAME OVER!</h3>
+        <h3 class="game-over-text">GAME OVER!</h3>
         <div class="panel" id="correct-answer-div">
           <h4>The correct answer was:</h4>
-          <h3 id="final-correct-answer"></h3>
+          <h3 id="final-correct-answer">x</h3>
         </div>
         <div class="panel final-score-div">
           <h4 class="final-score-text">Final Score:</h4>
-          <h2 class="final-score-number"></h2>
+          <h2 class="final-score-number">0</h2>
         </div>
       </div>
 
     <div class="buttons-div" id="game-over-buttons-div">
-      <button class="game-button" id="try-again">Try Again</button>
+      <button class="game-button" id="game-over-try-again">Try Again</button>
       <button class="home-button" id="game-over-home-button">Home</button>
     </div>
 
@@ -113,18 +114,18 @@
      <!-- Game Over display when Timer runs out -->
      <div class="hide container" id="times-up-container">
       <div class="panel" id="times-up-panel">
-        <h2 id="game-over-text">TIME'S UP!</h2>
+        <h2 class="game-over-text">TIME'S UP!</h2>
         <div class="panel" id="well-done">
           <h3>Well done! You answered all questions correctly</h3>
         </div>
         <div class="panel final-score-div">
           <h4 class="final-score-text">Final Score:</h4>
-          <h2 class="final-score-number"></h2>
+          <h2 class="final-score-number">0</h2>
         </div>
       </div>
       
       <div class="buttons-div" id="times-up-buttons-div">
-        <button class="game-button" id="try-again">Try Again</button>
+        <button class="game-button" id="times-up-try-again">Try Again</button>
         <button class="home-button" id="times-up-home-button">Home</button>
       </div>
     </div>

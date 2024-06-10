@@ -91,6 +91,10 @@ button {
     text-align: center;
 }
 
+#high-score {
+    color: var(--accent);
+}
+
 .answers-list {
     list-style-type: none;
     display: flex;
@@ -119,7 +123,8 @@ button:hover {
     height: 4rem;
 }
 
-#try-again {
+#game-over-try-again,
+#times-up-try-again {
     margin-top: 1rem;
 }
 
@@ -217,7 +222,8 @@ footer {
     }
 
     #times-up-home-button,
-    #try-again  {
+    #game-over-try-again,
+    #timees-up-try-again  {
         margin: 1rem;
     }
 
