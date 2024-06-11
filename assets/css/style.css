@@ -19,12 +19,13 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-/* Gradient for background - from https://www.naukri.com/code360/library/how-to-create-a-javascript-quiz-code) */
+    /* Gradient for background - from https://www.naukri.com/code360/library/how-to-create-a-javascript-quiz-code) */
     background: linear-gradient(to right, #347A2A, var(--lightgreen));
     background-repeat: no-repeat;
     color: var(--black);
@@ -55,10 +56,11 @@ header h1 {
     width: auto;
 }
 
+/* Main */
 main {
-     /* Make main element take up any surplus space to push footer down */
-     flex: 1 0 auto;
-    }
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+}
 
 /* Container for welcome, game and game-over content */
 .container {
@@ -97,6 +99,7 @@ button {
     color: var(--accent);
 }
 
+/* Multiple choice answer display */
 .answers-list {
     list-style-type: none;
     display: flex;
@@ -129,6 +132,7 @@ button:hover {
     color: var(--black);
 }
 
+/* Game Over and Time's Up areas */
 #game-over-try-again,
 #times-up-try-again {
     margin-top: 1rem;
@@ -169,14 +173,14 @@ footer {
 
 
 /* Media query: large or landscape phones (576px and up) */
-
 @media screen and (min-width: 576px) {
     .container {
-        align-items: center; /* Keep items centered horizontally */
-      /*  justify-content: flex-start; /* Align items at the top vertically */ 
-        padding-top: 2rem; /* Adjust panel to be 2rem from the top */
+        align-items: center;
+        /* Keep items centered horizontally */
+        padding-top: 2rem;
+        /* Adjust panel to be 2rem from the top */
         margin-top: 2rem;
-}
+    }
 }
 
 @media screen and (max-width: 368px) {
@@ -192,7 +196,6 @@ footer {
 }
 
 /* Media query: small phones in landscape mode (320px and up) */
-/*@media only screen and (max-width: 480px) and (max-height: 320px) */
 @media screen and (max-height: 400px) and (orientation: landscape) {
 
     header {
@@ -201,7 +204,7 @@ footer {
     }
 
     .container {
-        padding-top: 2rem; 
+        padding-top: 2rem;
         padding-bottom: 1rem;
         margin-top: 1rem;
         height: 65vh;
@@ -218,13 +221,14 @@ footer {
         padding: 0.5rem;
     }
 
-    .area, button {
-    margin-bottom: 0.5rem;
+    .area,
+    button {
+        margin-bottom: 0.5rem;
     }
 
     #times-up-home-button,
     #game-over-try-again,
-    #timees-up-try-again  {
+    #times-up-try-again {
         margin: 1rem;
     }
 
@@ -232,5 +236,5 @@ footer {
         height: 2rem;
         padding: 0.125rem;
     }
-   
+
 }

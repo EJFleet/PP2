@@ -1,3 +1,4 @@
+// Questions
 let questions = [
     { question: "What is the main ingredient in a traditional meringue?", answers: ["Butter", "Egg whites", "Flour"], correct: "Egg whites" },
     { question: "Which country is the origin of the cocktail Mojito?", answers: ["Brazil", "Cuba", "Mexico"], correct: "Cuba" },
@@ -64,6 +65,7 @@ let questions = [
     { question: "What type of pasta is 'Pappardelle'?", answers: ["Thin strips", "Wide ribbons", "Small tubes"], correct: "Wide ribbons" },
   ];
 
+// Variables
     const highScoreSpan = document.getElementById('high-score');
     const currentScore = document.getElementById('current-score'); //span
     const timerSpan = document.getElementById('timer-span');
@@ -71,16 +73,14 @@ let questions = [
     const questionText = document.getElementById('question-text'); //div .panel with h3 within it
     const finalAnswer = document.getElementById('final-correct-answer');
     const finalScoreNumber = document.getElementsByClassName('final-score-number');
-    const answerButtons = document.getElementsByClassName('answer-button');
     const gameContainer = document.getElementById('game-container');
     const gameOverContainer = document.getElementById('game-over-container');
     const timesUpContainer = document.getElementById('times-up-container');
     const homeContainer = document.getElementById('home-container');
-
     let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
     let timeLeft = 30;
 
-
+// Adding event listeners to buttons to start game play or bring back to home screen
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
@@ -99,7 +99,7 @@ let questions = [
 
 
 /**
- * The game loop, called when the "Let's Go" or "Try Again" buttons are clicked
+ * The game loop, called when the "Yes! Let's Go" or "Try Again" buttons are clicked
  */
 
 function runGame(){
@@ -116,11 +116,11 @@ function runGame(){
     clearInterval(timer);
     startTimer();
     displayQuestion();
-
 }
 
 /**
- * Fisher-Yates shuffle for randomising which question is shown (from StackOverflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+ * Fisher-Yates shuffle for randomising which question is shown 
+ * (from StackOverflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
  */
 function shuffleQuestions(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -149,18 +149,15 @@ function displayQuestion(){
             let clickedButton = event.currentTarget;
             checkAnswer(clickedButton);       
         }
-    )
-    
-        liElement.appendChild(answerButton)
-        answerButtonUl.appendChild(liElement)
-
+    );    
+        liElement.appendChild(answerButton);
+        answerButtonUl.appendChild(liElement);
     }
 }
 
 /**
  * Checks if the answer-button that is clicked by user is correct
  */
-
 function checkAnswer(selectedButton){
     let currentQuestion = shuffledQuestions[currentQuestionIndex];
     if (selectedButton.textContent === currentQuestion.correct){
@@ -176,7 +173,6 @@ function checkAnswer(selectedButton){
 /**
  * Starts the timer at 30 seconds and counts down to zero
  */
-
 function startTimer(){
     timer = setInterval(() => {
         timeLeft--;
@@ -188,11 +184,9 @@ function startTimer(){
     }, 1000);
 }
 
-
 /**
- * Displays the current highest score
+ * Sets and displays the current highest score
  */
-
 function getHighestScore(){
     return parseInt(localStorage.getItem('highestScore')) || 0;
 }
@@ -209,11 +203,9 @@ function updateHighestScore(){
     highScoreSpan.textContent = getHighestScore();
 }
 
-
 /**
  * Displays the game-over panel when a wrong answer is clicked
  */
-
 function endGame(){
     clearInterval(timer);
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
@@ -228,7 +220,6 @@ function endGame(){
 /**
  * Displays the times-up panel when the timer runs out 
  */
-
 function timesUp(){
     clearInterval(timer);
     gameContainer.classList.add('hide');

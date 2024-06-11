@@ -1,136 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="chef-hat-favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="chef-hat-favicon.png">
 
-  <!-- Link to CSS Stylesheet-->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link to CSS Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Title -->
-  <title>Emma's Cooking Quiz</title>
+    <!-- Title -->
+    <title>Emma's Cooking Quiz</title>
 </head>
 
 <body>
 
-  <!-- Header section -->
-  <header>
-    <div id="heading-contents-container">
-        <h1>Emma's Cooking Quiz <img id="chef-hat-logo" src="assets/images/chef-hat-32.png" alt="chef hat logo"></h1>
-    </div>
-  </header>
-  
-  <main>
-    <!-- Main container on home page -->
-    <div class="container" id="home-container">
-    
-      <!-- Section with welcome message, highest score and call to action -->
-      <div class="panel" id="welcome-panel">
-        <div class="area" id="welcome-text">
-          <h2>Welcome to my Cooking Quiz!</h2>
-          <p class="panel">Get as many correct answers as you can in 30 seconds - the game ends when you get a wrong answer or the timer runs out</p>
+    <!-- Header section -->
+    <header>
+        <div id="heading-contents-container">
+            <h1>Emma's Cooking Quiz <img id="chef-hat-logo" src="assets/images/chef-hat-32.png" alt="chef hat logo"></h1>
         </div>
-    
-        <!-- Displays current high score -->
-        <div class="area" id="score-area">
-          <h3>Current High Score: <span id="high-score">0</span></h3>
-        </div>
-    
-        <!-- Call to action -->
-        <div class="area" id="are-you-ready">
-          <h3>Are you ready to begin?</h3>
-        </div> 
-        
-        <!-- Button to initiate game play -->
-        <div class="buttons-div" id="home-page-buttons-div">
-          <button class="game-button" id="lets-go">Yes! Let's go</button>
-        </div>  
-      </div>
+    </header>
 
-    </div>
+    <main>
+        <!-- Main container on home page -->
+        <div class="container" id="home-container">
 
-    <!-- Game -->
-    <div class="hide container" id="game-container">
-      
-      <!-- Displays random question -->
-      <div class="panel" id="question-text">
-        <h3>Placeholder Question?</h3>
-      </div>
+            <!-- Section with welcome message, highest score and call to action -->
+            <div class="panel" id="welcome-panel">
+                <div class="area" id="welcome-text">
+                    <h2>Welcome to my Cooking Quiz!</h2>
+                    <p class="panel">Get as many correct answers as you can in 30 seconds - the game ends when you get a wrong answer or the timer runs out</p>
+                </div>
 
-        <!-- Displays three multiple choice answers -->
-        <div class="area" id="answer-section">
-          <div class="area" id="answers">
-            <ul class="answers-list"></ul>
-          </div>
+                <!-- Displays current high score -->
+                <div class="area" id="score-area">
+                    <h3>Current High Score: <span id="high-score">0</span></h3>
+                </div>
+
+                <!-- Call to action -->
+                <div class="area" id="are-you-ready">
+                    <h3>Are you ready to begin?</h3>
+                </div>
+
+                <!-- Button to initiate game play -->
+                <div class="buttons-div" id="home-page-buttons-div">
+                    <button class="game-button" id="lets-go">Yes! Let's go</button>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Timer -->
-        <div id="timer-section">
-          <h3>Time remaining: <span id="timer-span"></span> seconds</h3>
+        <!-- Game -->
+        <div class="hide container" id="game-container">
+
+            <!-- Displays random question -->
+            <div class="panel" id="question-text">
+                <h3>Placeholder Question?</h3>
+            </div>
+
+            <!-- Displays three multiple choice answers -->
+            <div class="area" id="answer-section">
+                <div class="area" id="answers">
+                    <ul class="answers-list"></ul>
+                </div>
+            </div>
+
+            <!-- Timer -->
+            <div id="timer-section">
+                <h3>Time remaining: <span id="timer-span"></span> seconds</h3>
+            </div>
+
+            <!-- Displays current score -->
+            <div class="area" id="score-section">
+                <h4>Your Score: <span id="current-score"></span></h4>
+            </div>
+
         </div>
 
-        <!-- Displays current score -->
-        <div class="area" id="score-section">
-          <h4>Your Score: <span id="current-score"></span></h4>
+
+        <!-- Game Over display when wrong answer is clicked -->
+        <div class="hide container" id="game-over-container">
+            <div class="panel" id="game-over-panel">why
+                <!-- Text displayed explaining that game is over and giving the correct answer -->
+                <h3 class="game-over-text">GAME OVER!</h3>
+                <div class="panel" id="correct-answer-div">
+                    <h4>The correct answer was:</h4>
+                    <h3 id="final-correct-answer">x</h3>
+                </div>
+                <!-- Display the user's final score -->
+                <div class="panel final-score-div">
+                    <h4 class="final-score-text">Final Score:</h4>
+                    <h2 class="final-score-number">0</h2>
+                </div>
+            </div>
+
+            <!-- Buttons for trying again or going back to home screen -->
+            <div class="buttons-div" id="game-over-buttons-div">
+                <button class="game-button" id="game-over-try-again">Try Again</button>
+                <button class="home-button" id="game-over-home-button">Home</button>
+            </div>
+
         </div>
 
-      </div>
-
-
-    <!-- Game Over display when wrong answer is clicked -->
-    <div class="hide container" id="game-over-container">
-      
-      <div class="panel" id="game-over-panel">
-        <h3 class="game-over-text">GAME OVER!</h3>
-        <div class="panel" id="correct-answer-div">
-          <h4>The correct answer was:</h4>
-          <h3 id="final-correct-answer">x</h3>
+        <!-- Game Over display when Timer runs out -->
+        <div class="hide container" id="times-up-container">
+            <div class="panel" id="times-up-panel">
+                <!-- Text displayed explaing why game ended and congratulating user -->
+                <h2 class="game-over-text">TIME'S UP!</h2>
+                <div class="panel" id="well-done">
+                    <h3>Well done! You answered all questions correctly</h3>
+                </div>
+                <!-- Display the user's final score -->
+                <div class="panel final-score-div">
+                    <h4 class="final-score-text">Final Score:</h4>
+                    <h2 class="final-score-number">0</h2>
+                </div>
+            </div>
+            <!-- Buttons for trying again or going back to home screen -->
+            <div class="buttons-div" id="times-up-buttons-div">
+                <button class="game-button" id="times-up-try-again">Try Again</button>
+                <button class="home-button" id="times-up-home-button">Home</button>
+            </div>
         </div>
-        <div class="panel final-score-div">
-          <h4 class="final-score-text">Final Score:</h4>
-          <h2 class="final-score-number">0</h2>
-        </div>
-      </div>
 
-    <div class="buttons-div" id="game-over-buttons-div">
-      <button class="game-button" id="game-over-try-again">Try Again</button>
-      <button class="home-button" id="game-over-home-button">Home</button>
-    </div>
+    </main>
 
-    </div>
+    <!-- Footer -->
+    <footer>
+        <button class="home-button" id="footer-home-button">Home</button>
+    </footer>
 
-     <!-- Game Over display when Timer runs out -->
-     <div class="hide container" id="times-up-container">
-      <div class="panel" id="times-up-panel">
-        <!-- Text displayed explaing why game ended and congratulating user -->
-        <h2 class="game-over-text">TIME'S UP!</h2>
-        <div class="panel" id="well-done">
-          <h3>Well done! You answered all questions correctly</h3>
-        </div>
-        <!-- Display the user's final score -->
-        <div class="panel final-score-div">
-          <h4 class="final-score-text">Final Score:</h4>
-          <h2 class="final-score-number">0</h2>
-        </div>
-      </div>
-        <!-- Buttons for trying again or going back to home screen -->
-      <div class="buttons-div" id="times-up-buttons-div">
-        <button class="game-button" id="times-up-try-again">Try Again</button>
-        <button class="home-button" id="times-up-home-button">Home</button>
-      </div>
-    </div>
-
-  </main>  
-
-  <!-- Footer -->
-  <footer>
-    <button class="home-button" id="footer-home-button">Home</button>
-  </footer>
-
-  <!-- Link to javaScript file -->    
-  <script src="assets/js/script.js"></script>
+    <!-- Link to javaScript file -->
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
