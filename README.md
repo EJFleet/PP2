@@ -29,9 +29,14 @@ View Emma's Cooking Quiz on [Github Pages](https://ejfleet.github.io/cooking-qui
  
 * [Features](#features)
   * [Header](#header)
-  * [Footer](#footer)
   * [Favicon](#favicon)
- 
+  * [Footer](#footer)
+  * [Buttons](#buttons)
+  * [Timer](#timer)
+  * [High Score](#high-score)
+  * [Current Score](#current-score)
+  * [Final Score](#final-score)
+   
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
@@ -50,12 +55,12 @@ View Emma's Cooking Quiz on [Github Pages](https://ejfleet.github.io/cooking-qui
   * [Browser Compatibility](#browser-compatibility)
   * [Responsiveness](#responsiveness)
   * [HTML, CSS and JavaScript Validation](#html-css-and-javascript-validation)
+  * [Lighthouse](#lighthouse)
   * [Solved Bugs](#solved-bugs)
 
 * [Credits](#credits)
   * [Code Used](#code-used)
   * [Content](#content)
-  * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
 ---
@@ -145,7 +150,7 @@ The website consists of one page with four different containers that are display
 
 The site fits into the height of the screen and there is no need for scrolling.
 
-The site was designed mobile-first and is responsive at every screen size.
+The site was designed mobile-first and is responsive for screens from 320px upwards.
 
 
 ### Header
@@ -180,7 +185,20 @@ They each have one of three possible functions:
 2.  Answer the question; or
 3.  Bring the user back to the home screen.
 
-![Inactive Button](documentation/feature-screenshots/button-inactive.png) ![Active Button](documentation/feature-screenshots/button-active.png) ![Answer Buttons](documentation/feature-screenshots/answer-buttons.png) ![Home Button](documentation/feature-screenshots/home-button.png) ![Try Again and Home Button](documentation/feature-screenshots/try-again-home-buttons.png)
+#### Inactive Button
+![Inactive Button](documentation/feature-screenshots/button-inactive.png) 
+
+#### Button when hovered over with pointer
+![Active Button](documentation/feature-screenshots/button-active.png) 
+
+#### Answer buttons
+![Answer Buttons](documentation/feature-screenshots/answer-buttons.png) 
+
+#### Home button in Footer
+![Home Button](documentation/feature-screenshots/home-button.png) 
+
+#### Try Again and Home Button at end of game
+![Try Again and Home Button](documentation/feature-screenshots/try-again-home-buttons.png)
 
 
 ### Timer
@@ -245,11 +263,11 @@ Gitpod - For developing the site.
 
 Google Fonts - To import the fonts used on the website.
 
-Font Awesome - For the iconography on the website.
-
 Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 
 Lighthouse - Chrome extension used to assess accessibility.
+
+[Flaticon.com](https://www.flaticon.com/free-icon/chef-hat_4443003) for the favicon and header logo.
 
 [Shields.io](https://shields.io/) for adding badges to the readme.
 
@@ -260,6 +278,12 @@ Lighthouse - Chrome extension used to assess accessibility.
 [Deque Univerity](https://dequeuniversity.com/rules/axe/4.8/color-contrast) for adjusting colours to meet accessibility standards.
 
 [Beautifier.io](https://beautifier.io/) to format the site's code.
+
+[ImageResizer.com](https://imageresizer.com/) to make the header logo smaller.
+
+[AmIResponsive?](https://ui.dev/amiresponsive) to make the image of the site on different displays.
+
+[Adobe Express Image Resizer](https://www.adobe.com/express/feature/image/resize) for resizing images for this README.
 
 
 ## Deployment & Local Development
@@ -334,7 +358,7 @@ The site was tested on the following devices:
 * 15.6" Laptop
 * Desktop PC
 
-It was extensively tested in Chrome Dev Tools for responsiveness from 300px - 5000px.
+It was extensively tested in Chrome Dev Tools for responsiveness from 320px - 5000px.
 
 ### HTML, CSS and JavaScript Validation
 
@@ -381,18 +405,33 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 ## Credits
 
-https://imageresizer.com/
-
 ### Code Used
 
+* Code Institute's Love Maths project for the initial html and css structuring.
+
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) for how to do a box shadow correctly
+
+* [Alisha98A's Food Quiz](https://github.com/Alisha98A/Food-Quiz/blob/main/game.html) for how to structure the questions array
+
+* [Naukri Code 360](https://www.naukri.com/code360/library/how-to-create-a-javascript-quiz-code) for the linear gradient of the background
+
+* [This post](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) on StackOverflow for how to shuffle the questions with a Fisher-Yates shuffle
+
+* [StackOverflow again](https://stackoverflow.com/questions/40532204/media-query-for-devices-supporting-hover) for getting rid of the hover state on the buttons in mobile view
+
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/any-hover) for the media query only applying a hover state to devices with access to pointers
+
+* [My PP1 project](https://github.com/EJFleet/joan-fleetwood-actor) for the structure of the README.
 
 
 ### Content
 
+* The questions and answers for the game were provided by ChatGPT and edited by me.
 
-### Media
 
-
-  
 ### Acknowledgments
 
+
+* My mentor Brian Macharia for his help, clear explanations and advice on solving a bug
+* Amy Richardson for facilitating our weekly standups and being a font of information and encouragement
+* My friends and family for testing the project on their devices and offering words of encouragement
