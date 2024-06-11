@@ -49,7 +49,7 @@ View Emma's Cooking Quiz on [Github Pages](https://ejfleet.github.io/cooking-qui
   * [Functionality](#functionality)
   * [Browser Compatibility](#browser-compatibility)
   * [Responsiveness](#responsiveness)
-  * [HTML and CSS Validation](#html-and-css-validation)
+  * [HTML, CSS and JavaScript Validation](#html-css-and-javascript-validation)
   * [Solved Bugs](#solved-bugs)
 
 * [Credits](#credits)
@@ -312,8 +312,8 @@ To clone the repository:
 |Timer ends|Timer runs out|'Time's Up' panel displays|PASS|
 |High Score|Get highest number of questions correct|High Score updates on home screen|PASS|
 |Try Again button (both end screens)|Click button|Game restarts|PASS|
-|Home button (both end screens)|Brings user back to home screen|PASS|
-|Footer home button|Brings user back to home screen|PASS|
+|Home button (both end screens)|Click button|Brings user back to home screen|PASS|
+|Footer home button|Click button|Brings user back to home screen|PASS|
 
 ### Browser Compatibility
 

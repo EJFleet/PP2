@@ -120,12 +120,6 @@ button {
     margin-right: 0.25rem;
 }
 
-button:hover {
-    color: var(--white);
-    background-color: var(--accent);
-    cursor: pointer;
-}
-
 .answer-button {
     height: 4rem;
     background-color: var(--accent);
@@ -170,6 +164,16 @@ footer {
 #footer-home-button {
     margin: 0.5rem auto;
 }
+
+/* Media query to only add hover state in devices that allow hover */
+@media (any-hover: hover) {
+    button:hover {
+        color: var(--white);
+        background-color: var(--accent);
+        cursor: pointer;
+    }
+  }
+  
 
 
 /* Media query: large or landscape phones (576px and up) */
