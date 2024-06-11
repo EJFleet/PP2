@@ -326,11 +326,22 @@ I used the W3C Markup Validator and W3C CSS Validator to validate the site and t
 #### CSS
 
 
+### JavaScript Validation
+
+
+
+
 ### Lighthouse
 
 I used the Chrome extension Lighthouse to test the site, particularly for Performance and Accessibility.  Results below.
 
-![Lighthouse results]
+#### Mobile
+
+![Lighthouse results mobile](documentation/testing/lighthouse-mobile.png)
+
+#### Desktop
+
+![Lighthouse results mobile](documentation/testing/lighthouse-desktop.png)
 
 
 ### Solved Bugs
@@ -345,6 +356,8 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 
 ## Credits
+
+https://imageresizer.com/
 
 ### Code Used
 

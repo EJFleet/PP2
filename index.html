@@ -7,11 +7,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="chef-hat-favicon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
   <!-- Link to CSS Stylesheet-->
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -110,16 +105,18 @@
      <!-- Game Over display when Timer runs out -->
      <div class="hide container" id="times-up-container">
       <div class="panel" id="times-up-panel">
+        <!-- Text displayed explaing why game ended and congratulating user -->
         <h2 class="game-over-text">TIME'S UP!</h2>
         <div class="panel" id="well-done">
           <h3>Well done! You answered all questions correctly</h3>
         </div>
+        <!-- Display the user's final score -->
         <div class="panel final-score-div">
           <h4 class="final-score-text">Final Score:</h4>
           <h2 class="final-score-number">0</h2>
         </div>
       </div>
-      
+        <!-- Buttons for trying again or going back to home screen -->
       <div class="buttons-div" id="times-up-buttons-div">
         <button class="game-button" id="times-up-try-again">Try Again</button>
         <button class="home-button" id="times-up-home-button">Home</button>
@@ -128,10 +125,12 @@
 
   </main>  
 
+  <!-- Footer -->
   <footer>
     <button class="home-button" id="footer-home-button">Home</button>
   </footer>
-    
+
+  <!-- Link to javaScript file -->    
   <script src="assets/js/script.js"></script>
 </body>
 </html>
