@@ -56,7 +56,7 @@ header h1 {
 main {
      /* Make main element take up any surplus space to push footer down */
      flex: 1 0 auto;
-}
+    }
 
 /* Container for welcome, game and game-over content */
 .container {

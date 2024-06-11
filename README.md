@@ -2,9 +2,11 @@
 
 ## Intro
 
-![Screenshots of PP2 website on different devices]
+For my second portfolio project, I chose to design a quiz with questions based on food and cooking.  The user has 30 seconds in which to answer as many questions as possible, with the game ending with either the choosing of a wrong answer or when the timer runs out.
 
-View PP2 on Github Pages.
+![Screenshots of PP2 website on different devices](documentation/feature-screenshots/am-i-responsive-cooking-quiz.png)
+
+View Emma's Cooking Quiz on [Github Pages](https://ejfleet.github.io/cooking-quiz/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/EJFleet/cooking-quiz)
 ![GitHub language count](https://img.shields.io/github/languages/count/EJFleet/cooking-quiz)
@@ -91,7 +93,7 @@ I want to:
 
 The colour palette was created using the [Coolors](https://coolors.co/) website.  I checked the accessibility of the colours on [Deque University](https://dequeuniversity.com/rules/axe/4.9/color-contrast) and adjusted the accent colour (orange) to improve the contrast.
 
-The main colours are green for the background (with a gradient that gets lighter from left to right) and orange for the buttons.
+The main colours are green for the background (with a gradient that gets lighter from left to right) and orange for the buttons.   The colours were chosen for a clean, fresh look with good contrast and with accessibility at the forefront.
 
 ![Colour palette for the site](documentation/feature-screenshots/cooking-quiz-palette2.png)
 
@@ -105,14 +107,13 @@ I chose to use the Oswald font throughout the site as it looks clean and modern.
 
 ### Imagery
 
-The imagery for the site consists of a small chef's hat for the favicon and a larger chef's hat for the logo in the header.
+The imagery for the site consists of a small chef's hat for the favicon and a larger version of the same chef's hat for the logo in the header.
 
-![Favicon](/chef-hat-favicon.png)
-
-![Logo](/assets/images/chef-hat.png)
+![Favicon and Logo](documentation/feature-screenshots/chef-logo-white-background.png)
 
 ### Wireframes
 
+The wireframes that I originally designed have slightly different aesthetic differences to the finished product.  During the construction process, I decided to change the format and layout of the buttons.  I added a timer and also a display for when the game ended due to the timer running out.  The original wireframes are below - though the concept evolved, the original layout is still relevant and can be recognised in the finished site.
 
 #### Mobile
 
@@ -146,42 +147,76 @@ The site fits into the height of the screen and there is no need for scrolling.
 
 The site was designed mobile-first and is responsive at every screen size.
 
-The sections are divided into:
 
 ### Header
 
-#### Mobile
-![Header for mobile]
+The header stretches across the whole viewport, even on very large screens, to give a framing effect to the content below.  It contains the title of the site and the logo.
 
-#### Desktop
-![Header for desktop]
+![Header](documentation/feature-screenshots/header.png)
 
-The header stretches across the whole viewport, even on very large screens, to give a framing effect to the content below.
+### Favicon
+
+The favicon for the site was downloaded from [Flaticon](https://www.flaticon.com/free-icon/chef-hat_4443003?k=1717963724519&sign-up=google) and is attributed to [Freepik](https://www.flaticon.com/authors/freepik).
+
+
+![Favicon](documentation/feature-screenshots/chef-favicon-white-background.png)
+
 
 ### Footer
-
-#### Mobile
-![Footer for mobile]
-
-#### Desktop
-![Footer for desktop]
 
 The footer contains a link to the home page.
 
 As with the header, the footer stretches across the whole screen to give a framing effect.
 
-### Favicon
-
-![Favicon](/chef-hat-favicon.png)
-
-The favicon for the site was downloaded from [Flaticon](https://www.flaticon.com/free-icon/chef-hat_4443003?k=1717963724519&sign-up=google) and is attributed to [Freepik](https://www.flaticon.com/authors/freepik).
+![Footer](documentation/feature-screenshots/footer.png)
 
 
+### Buttons
+
+The buttons are orange with black writing when they are inactive.  When they are hovered over, the writing changes to white and the cursor changes to a pointer finger.
+
+They each have one of three possible functions: 
+1.  Start the game;
+2.  Answer the question; or
+3.  Bring the user back to the home screen.
+
+![Inactive Button](documentation/feature-screenshots/button-inactive.png) ![Active Button](documentation/feature-screenshots/button-active.png) ![Answer Buttons](documentation/feature-screenshots/answer-buttons.png) ![Home Button](documentation/feature-screenshots/home-button.png) ![Try Again and Home Button](documentation/feature-screenshots/try-again-home-buttons.png)
+
+
+### Timer
+
+The timer starts at 30 seconds and counts down during the game, with the time remaining displayed for the user.  If the timer runs out, the game ends.  
+
+![Timer](documentation/feature-screenshots/timer-display.png)
+
+
+### High Score
+
+The highest score achieved in the game is displayed on the home screen.  It is saved in local storage.
+
+![High Score](documentation/feature-screenshots/high-score.png)
+
+
+### Current Score
+
+The user's score starts at 0 on initiation of game play.  This increments by 1 with every correct answer.  
+
+![Current Score](documentation/feature-screenshots/your-score.png)
+
+
+### Final Score
+
+The user's final score is displayed on the panel at the end of the game.
+
+![Final Score](documentation/feature-screenshots/final-score.png)
 
 ### Future Implementations
 
 I would like to add the following features:
 
+* A notification with a confetti effect for when the user achieves a new high score
+* A scoreboard for keeping track of more than one high score
+* More questions
 
 
 ### Accessibility
@@ -189,10 +224,9 @@ I would like to add the following features:
 I have tried to make the site as accessible as possible.  Steps that I have been conscious to take are:
 
 * Using semantic HTML
-* Choosing fonts that are dyslexia-friendly
-* Using descriptive alt attributes on all images 
-* Providing aria-labels for screen readers where there are icons used and no text, i.e. the social media icons in the footer
+* Choosing a font that is dyslexia-friendly
 * Ensuring that there is a sufficient colour contrast throughout the site
+* Checking that the size of font is not too small
 
 
 ## Technologies Used
@@ -204,29 +238,16 @@ HTML, CSS and JavaScript were the main languages used to build this site.
 ### Frameworks, Libraries & Programs Used
 
 Git - For version control.
-
 Github - To save and store the files for the website.
-
 Gitpod - For developing the site.
-
 Google Fonts - To import the fonts used on the website.
-
 Font Awesome - For the iconography on the website.
-
 Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
-
 Lighthouse - Chrome extension used to assess accessibility.
-
 [Shields.io](https://shields.io/) for adding badges to the readme.
-
-[Favicon.io](https://favicon.io/favicon-generator/) for creating a custom favicon.
-
 [Achecks.org](https://www.achecks.org/apca-wcag-3-accessible-colour-contrast-checker/) for checking the colour contrast for accessibility.
-
 [Coolors.co](https://coolors.co) for creating a colour scheme.
-
 [Deque Univerity](https://dequeuniversity.com/rules/axe/4.8/color-contrast) for adjusting colours to meet accessibility standards.
-
 [Beautifier.io](https://beautifier.io/) to format the site's code.
 
 
@@ -314,11 +335,14 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 ### Solved Bugs
 
-* Clicked answer-button did not revert back to its original state when the next question was displayed, in mobile view only. 
+* Clicked answer-button not reverting back to its original state when the next question is displayed, in mobile view only. 
 
-* 
+  Solved by: using javaScript to construct the buttons each time the displayQuestion() function is called, rather than setting them in HTML.
 
-* 
+* Button text showing up as blue on iPhone.
+
+  Solved by: setting an explicit colour for text in all buttons.
+
 
 ## Credits
 
