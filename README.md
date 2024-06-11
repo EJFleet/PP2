@@ -238,16 +238,27 @@ HTML, CSS and JavaScript were the main languages used to build this site.
 ### Frameworks, Libraries & Programs Used
 
 Git - For version control.
+
 Github - To save and store the files for the website.
+
 Gitpod - For developing the site.
+
 Google Fonts - To import the fonts used on the website.
+
 Font Awesome - For the iconography on the website.
+
 Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
 Lighthouse - Chrome extension used to assess accessibility.
+
 [Shields.io](https://shields.io/) for adding badges to the readme.
+
 [Achecks.org](https://www.achecks.org/apca-wcag-3-accessible-colour-contrast-checker/) for checking the colour contrast for accessibility.
+
 [Coolors.co](https://coolors.co) for creating a colour scheme.
+
 [Deque Univerity](https://dequeuniversity.com/rules/axe/4.8/color-contrast) for adjusting colours to meet accessibility standards.
+
 [Beautifier.io](https://beautifier.io/) to format the site's code.
 
 
@@ -292,7 +303,17 @@ To clone the repository:
 
 |Test Label|Test Action|Expected Outcome|Test Outcome|
 |-----|-----|-----|-----|
-
+|Yes! Let's Go Button|Click button|Game begins|PASS|
+|Buttons hover|Hover over button|Text changes to white|PASS|
+|Answer buttons (correct)|Click correct answer button|Next question displays|PASS|
+|Answer buttons (incorrect)|Click incorrect answer button|'Game Over' panel displays|PASS|
+|Your Score|Correct answers are selected|Your Score updates by 1 for each correct answer|PASS|
+|Timer runs|Start game|Timer starts at 30 and counts down|PASS|
+|Timer ends|Timer runs out|'Time's Up' panel displays|PASS|
+|High Score|Get highest number of questions correct|High Score updates on home screen|PASS|
+|Try Again button (both end screens)|Click button|Game restarts|PASS|
+|Home button (both end screens)|Brings user back to home screen|PASS|
+|Footer home button|Brings user back to home screen|PASS|
 
 ### Browser Compatibility
 
@@ -315,20 +336,21 @@ The site was tested on the following devices:
 
 It was extensively tested in Chrome Dev Tools for responsiveness from 300px - 5000px.
 
-### HTML and CSS Validation
+### HTML, CSS and JavaScript Validation
 
-I used the W3C Markup Validator and W3C CSS Validator to validate the site and to ensure there were no syntax errors contained therein.
+I used the W3C Markup Validator, W3C CSS Validator and JSHint to validate the site and to ensure there were no syntax errors contained therein.
 
 #### HTML
 
-
+![W3C HTML Results](documentation/testing/w3c-html-validator.png)
 
 #### CSS
 
+![W3C CSS Results](documentation/testing/w3c-validator.png)
 
-### JavaScript Validation
+#### JavaScript
 
-
+![JSHint Results](documentation/testing/jshint-validator.png)
 
 
 ### Lighthouse
