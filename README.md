@@ -148,8 +148,6 @@ The wireframes that I originally designed have slightly different aesthetic diff
 
 The website consists of one page with four different containers that are displayed/hidden depending on which stage of the site the user is at - home, game play, game over or time's up.
 
-The site fits into the height of the screen and there is no need for scrolling.
-
 The site was designed mobile-first and is responsive for screens from 320px upwards.
 
 
@@ -434,4 +432,5 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 * My mentor Brian Macharia for his help, clear explanations and advice on solving a bug
 * Amy Richardson for facilitating our weekly standups and being a font of information and encouragement
+* Monika Mak, Fergal Mulligan and Sarah McLoughlin on Slack for their feedback 
 * My friends and family for testing the project on their devices and offering words of encouragement
