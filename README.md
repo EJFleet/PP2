@@ -304,7 +304,7 @@ To clone the repository:
 |Test Label|Test Action|Expected Outcome|Test Outcome|
 |-----|-----|-----|-----|
 |Yes! Let's Go Button|Click button|Game begins|PASS|
-|Buttons hover|Hover over button|Text changes to white|PASS|
+|Buttons hover|Hover over button (non-touch screen only)|Text changes to white|PASS|
 |Answer buttons (correct)|Click correct answer button|Next question displays|PASS|
 |Answer buttons (incorrect)|Click incorrect answer button|'Game Over' panel displays|PASS|
 |Your Score|Correct answers are selected|Your Score updates by 1 for each correct answer|PASS|
@@ -370,7 +370,9 @@ I used the Chrome extension Lighthouse to test the site, particularly for Perfor
 
 * Clicked answer-button not reverting back to its original state when the next question is displayed, in mobile view only. 
 
-  Solved by: using javaScript to construct the buttons each time the displayQuestion() function is called, rather than setting them in HTML.
+  Solved by: 
+  1.  using javaScript to construct the buttons each time the displayQuestion() function is called, rather than setting them in HTML;
+  2.  using a media query to only use the :hover pseudoclass on devices that can use hover.
 
 * Button text showing up as blue on iPhone.
 
