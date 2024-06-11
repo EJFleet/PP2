@@ -78,7 +78,7 @@ let questions = [
     const homeContainer = document.getElementById('home-container');
 
     let shuffledQuestions, currentQuestionIndex, currentScoreText, timer;
-    let timeLeft = 5;
+    let timeLeft = 30;
 
 
     let buttons = document.getElementsByTagName("button");
@@ -107,7 +107,7 @@ function runGame(){
     currentQuestionIndex = 0;
     currentScoreText = 0;
     currentScore.textContent = currentScoreText;
-    timeLeft = 5; // Reset the timer to 30 seconds
+    timeLeft = 30; // Reset the timer to 30 seconds
     timerSpan.innerText = timeLeft; // Update the timer display
     homeContainer.classList.add('hide');
     gameOverContainer.classList.add('hide');
